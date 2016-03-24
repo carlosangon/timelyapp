@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA6-Hb-6M9">
+                                <rect key="frame" x="160" y="42" width="280" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="0NZ-vz-F1O"/>
+                                    <constraint firstAttribute="width" constant="280" id="KNM-w6-JFc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBI-fU-Puc">
+                                <rect key="frame" x="237" y="251" width="126" height="126"/>
+                                <state key="normal" image="PlayBtn"/>
+                                <state key="selected" backgroundImage="PlayBtnActive"/>
+                                <connections>
+                                    <action selector="pauseBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IpO-z1-Kop"/>
+                                    <action selector="playBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C96-JH-yGe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssm-Ba-XE9">
+                                <rect key="frame" x="160" y="178" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4bc-fa-q9f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKN-vX-27m" customClass="resetBtn" customModule="Timely" customModuleProvider="target">
+                                <rect key="frame" x="20" y="487" width="560" height="80"/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.086274509803921567" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="NzU-WL-bYG"/>
+                                    <constraint firstAttribute="height" constant="80" id="VLU-Jc-QB8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" red="0.97254901960784312" green="0.13333333333333333" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="resetBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8BV-1y-jYH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ssm-Ba-XE9" firstAttribute="top" secondItem="uA6-Hb-6M9" secondAttribute="bottom" constant="11" id="4Td-Eo-Egg"/>
+                            <constraint firstItem="AKN-vX-27m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="87j-Ra-Mdw"/>
+                            <constraint firstItem="sBI-fU-Puc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bbp-JU-hmG"/>
+                            <constraint firstItem="AKN-vX-27m" firstAttribute="top" secondItem="sBI-fU-Puc" secondAttribute="bottom" constant="110" id="DoT-sE-tdB"/>
+                            <constraint firstItem="uA6-Hb-6M9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="HNB-gq-FZ4"/>
+                            <constraint firstItem="ssm-Ba-XE9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lfg-WN-URR"/>
+                            <constraint firstItem="sBI-fU-Puc" firstAttribute="top" secondItem="ssm-Ba-XE9" secondAttribute="bottom" constant="91" id="Nib-u9-5mK"/>
+                            <constraint firstItem="ssm-Ba-XE9" firstAttribute="leading" secondItem="uA6-Hb-6M9" secondAttribute="leading" id="Qf1-m1-65t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AKN-vX-27m" secondAttribute="bottom" constant="33" id="WYa-Pv-syE"/>
+                            <constraint firstItem="uA6-Hb-6M9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azK-DN-Ykj"/>
+                            <constraint firstItem="AKN-vX-27m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bk9-O9-RHz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DAr-pj-dsd"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="uA6-Hb-6M9" id="JS1-pT-sst"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlayBtn" width="126" height="126"/>
+        <image name="PlayBtnActive" width="126" height="126"/>
+    </resources>
+</document>
