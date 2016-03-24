@@ -1,2 +1,2 @@
 # timelyapp
-Simple Swift App making uses of NSTimer
+Simple Swift App making use of NSTimer
